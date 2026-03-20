@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Calendar, Clock3, MapPin, Sparkles, Crown, Heart, Cross } from 'lucide-react';
+import { Clock3, MapPin, Sparkles, Crown, Heart, Cross } from 'lucide-react';
 import Image from 'next/image';
 
 export default function CeremonyDetails() {
@@ -11,24 +11,26 @@ export default function CeremonyDetails() {
     triggerOnce: true,
   });
 
-  const details = [
+  const detailGroups = [
     {
-      icon: Calendar,
-      label: 'Date',
-      value: 'May 30, 2026',
-      sub: 'Saturday',
+      key: 'church',
+      title: 'Church',
+      timeLabel: 'Church Time',
+      timeValue: '9:30 AM',
+      timeSub: 'Holy wedding ceremony',
+      venueLabel: 'Church Venue',
+      venueValue: "St. Sebastian's Church - Godella",
+      venueSub: 'Live location available',
     },
     {
-      icon: Clock3,
-      label: 'Time',
-      value: '10:30 AM',
-      sub: 'Auspicious Time',
-    },
-    {
-      icon: MapPin,
-      label: 'Venue',
-      value: "St. Sebastian's Church - Godella",
-      sub: 'Live location available',
+      key: 'function',
+      title: 'Function',
+      timeLabel: 'Function Time',
+      timeValue: '11:30 AM',
+      timeSub: 'Reception and celebration',
+      venueLabel: 'Function Venue',
+      venueValue: 'Sampath Banquet Hall',
+      venueSub: 'Live location available',
     },
   ];
 
@@ -146,33 +148,46 @@ export default function CeremonyDetails() {
             </p>
 
             <div className="flex flex-col gap-5">
-              {details.map((detail, index) => {
-                const Icon = detail.icon;
+              {detailGroups.map((group, index) => {
                 return (
                   <motion.div
-                    key={detail.label}
+                    key={group.key}
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
                     whileHover={{ x: 10, backgroundColor: 'rgba(201,162,39,0.08)' }}
-                    className="group relative flex items-center gap-6 overflow-hidden rounded-2xl border border-[#C9A227]/25 bg-[linear-gradient(120deg,rgba(44,7,16,0.72)_0%,rgba(62,13,25,0.55)_100%)] p-5 shadow-lg backdrop-blur-md transition-all cursor-default"
+                    className="group relative overflow-hidden rounded-2xl border border-[#C9A227]/25 bg-[linear-gradient(120deg,rgba(44,7,16,0.72)_0%,rgba(62,13,25,0.55)_100%)] p-5 shadow-lg backdrop-blur-md transition-all cursor-default"
                   >
                     <div className="absolute left-0 top-0 w-1 h-full bg-[#C9A227] scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300" />
 
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-[#C9A227]/30 bg-gradient-to-br from-[#4a0f18] to-[#1a0408] shadow-inner">
-                      <Icon className="h-7 w-7 text-[#C9A227]" />
+                    <div className="mb-4">
+                      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70">{group.title} Details</p>
                     </div>
 
-                    <div>
-                      <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70 mb-1">
-                        {detail.label}
-                      </p>
-                      <h3 className="font-serif text-2xl text-[#f5e6c8]">
-                        {detail.value}
-                      </h3>
-                      <p className="text-sm text-[#f5e6c8]/50 mt-1">
-                        {detail.sub}
-                      </p>
+                    <div className="space-y-5">
+                      <div className="flex items-start gap-4">
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C9A227]/30 bg-gradient-to-br from-[#4a0f18] to-[#1a0408] shadow-inner">
+                          <Clock3 className="h-5 w-5 text-[#C9A227]" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70 mb-1">{group.timeLabel}</p>
+                          <h3 className="font-serif text-2xl text-[#f5e6c8]">{group.timeValue}</h3>
+                          <p className="text-sm text-[#f5e6c8]/50 mt-1">{group.timeSub}</p>
+                        </div>
+                      </div>
+
+                      <div className="h-px w-full bg-[#C9A227]/20" />
+
+                      <div className="flex items-start gap-4">
+                        <div className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#C9A227]/30 bg-gradient-to-br from-[#4a0f18] to-[#1a0408] shadow-inner">
+                          <MapPin className="h-5 w-5 text-[#C9A227]" />
+                        </div>
+                        <div>
+                          <p className="text-xs uppercase tracking-[0.25em] text-[#C9A227]/70 mb-1">{group.venueLabel}</p>
+                          <h3 className="font-serif text-2xl text-[#f5e6c8]">{group.venueValue}</h3>
+                          <p className="text-sm text-[#f5e6c8]/50 mt-1">{group.venueSub}</p>
+                        </div>
+                      </div>
                     </div>
                   </motion.div>
                 );
@@ -194,7 +209,7 @@ export default function CeremonyDetails() {
               </h4>
               <div className="space-y-2">
                 <p className="text-[#f5e6c8]/80 text-sm md:text-base"><span className="text-[#C9A227]">Dress Code:</span> Church Formal / Elegant Attire</p>
-                <p className="text-[#f5e6c8]/80 text-sm md:text-base"><span className="text-[#C9A227]">Reception:</span> To follow immediately after the church ceremony</p>
+                <p className="text-[#f5e6c8]/80 text-sm md:text-base"><span className="text-[#C9A227]">Reception:</span> Function starts at 11:30 AM at Sampath Banquet Hall</p>
               </div>
             </motion.div>
 

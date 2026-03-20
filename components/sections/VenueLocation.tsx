@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { ExternalLink, MapPin, Navigation, Sparkles } from 'lucide-react';
 
 const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/pmwZKctvXUn7T8pHA?g_st=iw';
+const FUNCTION_LOCATION_URL = 'https://maps.app.goo.gl/hPEbCMaPZywmpFQi7';
 
 export default function VenueLocation() {
   const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
@@ -49,7 +50,7 @@ export default function VenueLocation() {
           >
             <Sparkles className="h-4 w-4 text-[#c0784e]" />
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-[#c0784e] sm:text-sm">
-              Church Venue
+              Church & Function Venues
             </span>
           </motion.div>
 
@@ -169,6 +170,22 @@ export default function VenueLocation() {
                 <p className="mt-2 break-all text-xs text-[#7a6258]">
                   maps.app.goo.gl/pmwZKctvXUn7T8pHA
                 </p>
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-[#ead2b9]/60 bg-white/75 p-4">
+                <p className="text-[10px] uppercase tracking-[0.2em] text-[#b78058]">Function Venue</p>
+                <h4 className="mt-2 font-serif text-xl text-[#4d3732]">Sampath Banquet Hall</h4>
+                <p className="mt-2 text-xs text-[#7a6258]">Function starts at 11:30 AM</p>
+                <a
+                  href={FUNCTION_LOCATION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#b96f4d] px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-white shadow-[0_10px_24px_rgba(185,111,77,0.3)] transition-transform hover:scale-[1.02]"
+                >
+                  Open Hotel Location
+                  <ExternalLink className="h-4 w-4" />
+                </a>
+                <p className="mt-3 break-all text-xs text-[#7a6258]">maps.app.goo.gl/hPEbCMaPZywmpFQi7</p>
               </div>
             </div>
           </motion.div>
