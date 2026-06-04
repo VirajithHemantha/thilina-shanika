@@ -23,7 +23,7 @@ export default function Timeline() {
       icon: '🏠',
     },
     {
-      year: '2026',
+      year: '2027',
       title: 'Our Wedding',
       description: 'Celebrating love surrounded by those we cherish',
       icon: '💒',
@@ -84,11 +84,10 @@ export default function Timeline() {
           {/* Vertical line */}
           <motion.div
             className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1"
-            style={{ backgroundColor: 'var(--primary)', opacity: 0.3 }}
+            style={{ backgroundColor: 'var(--primary)', opacity: 0.3, transformOrigin: 'top' }}
             initial={{ scaleY: 0 }}
             animate={inView ? { scaleY: 1 } : { scaleY: 0 }}
             transition={{ duration: 1.2, delay: 0.2 }}
-            style={{ transformOrigin: 'top' }}
           />
 
           {/* Timeline items */}

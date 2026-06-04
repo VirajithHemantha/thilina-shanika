@@ -72,7 +72,7 @@ export default function Hero() {
           style={{ color: 'var(--primary)' }}
           variants={itemVariants}
         >
-          VIMUKTHI & PIUMI
+          THILINA &amp; SHANIKA
         </motion.h1>
 
         {/* Decorative line */}
@@ -91,9 +91,9 @@ export default function Hero() {
           variants={itemVariants}
         >
           <span className="block text-sm md:text-base opacity-75 mb-4">
-            Bride's Parents: Mother - T H Anusha Shiranthi | Father - G Dayawansa <br />
-            & <br />
-            Groom's Parents: Mother - M Helan Dammika Fernando | Father - W A Nelson Meril Fernando
+            Bride's Parents: Mother - Rupa Thilakarathna | Father - S.K. Wijethilaka <br />
+            &amp; <br />
+            Groom's Parents: Mother - Dayani Abesinghe | Father - A.K.Dayarathna
           </span>
           Together with their families,{' '}
           <span className="font-serif">joyfully</span> invite you to celebrate

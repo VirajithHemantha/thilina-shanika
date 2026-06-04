@@ -13,29 +13,7 @@ interface Blessing {
 }
 
 export function BlessingMessages() {
-  const [blessings, setBlessings] = useState<Blessing[]>([
-    {
-      id: 1,
-      author: 'Amali Wijesekera',
-      message:
-        'May your love continue to bloom with grace and devotion, and may every chapter of your life together be filled with happiness, strength, and peace.',
-      timestamp: '2 days ago',
-    },
-    {
-      id: 2,
-      author: "VIMUKTHI's Family",
-      message:
-        'With joy in our hearts, we welcome this beautiful union. May your home be filled with laughter, understanding, and lasting blessings.',
-      timestamp: '5 days ago',
-    },
-    {
-      id: 3,
-      author: 'Best Friend Forever',
-      message:
-        'From treasured memories to this unforgettable day, it has been a privilege to witness your journey. Wishing you a lifetime of love and beautiful beginnings.',
-      timestamp: '1 week ago',
-    },
-  ]);
+  const [blessings, setBlessings] = useState<Blessing[]>([]);
 
   const [newBlessing, setNewBlessing] = useState('');
   const [blessingAuthor, setBlessingAuthor] = useState('');
@@ -78,7 +56,7 @@ export function BlessingMessages() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#2d0810_0%,#4f101c_28%,#6f1525_52%,#f5e6c8_100%)] px-4 py-24 md:py-32">
+    <section className="relative overflow-hidden bg-[linear-gradient(180deg,#02241b_0%,#044b3c_28%,#066e56_52%,#f5e6c8_100%)] px-4 py-24 md:py-32">
       {/* Ambient background layers */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-1/2 top-10 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-[#C9A227]/10 blur-3xl" />
@@ -326,13 +304,13 @@ export function BlessingMessages() {
                               repeat: Infinity,
                               ease: 'easeInOut',
                             }}
-                            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-[#6d1424] shadow-[0_8px_20px_rgba(201,162,39,0.2)]"
+                            className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-[#064e3b] shadow-[0_8px_20px_rgba(201,162,39,0.2)]"
                           >
                             ✦
                           </motion.div>
 
                           <div>
-                            <h4 className="font-serif text-xl font-light text-[#5f1624]">
+                            <h4 className="font-serif text-xl font-light text-[#022c22]">
                               {blessing.author}
                             </h4>
                             <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-[#a38022]">
@@ -394,7 +372,7 @@ export function BlessingMessages() {
             <span className="h-px w-12 bg-[#C9A227]/40" />
           </div>
 
-          <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">
+          <p className="font-serif text-xl font-light italic text-[#044b3c] md:text-2xl">
             Every blessing becomes part of the love we carry into this new chapter.
           </p>
         </motion.div>

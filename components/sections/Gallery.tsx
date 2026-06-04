@@ -75,7 +75,7 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f4dfc2_18%,#6d1324_68%,#2c0610_100%)] px-6 py-24 md:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f4dfc2_18%,#064e3b_68%,#022c22_100%)] px-6 py-24 md:py-32"
     >
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
@@ -144,7 +144,7 @@ export default function Gallery() {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#064e3b] md:text-6xl">
             Our <span className="text-[#C9A227]">Moments</span>
           </h2>
 
@@ -274,7 +274,7 @@ export default function Gallery() {
             <span className="h-px w-12 bg-[#C9A227]/40" />
           </div>
 
-          <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">
+          <p className="font-serif text-xl font-light italic text-[#044b3c] md:text-2xl">
             Every memory has led us gently toward this beautiful beginning.
           </p>
         </motion.div>

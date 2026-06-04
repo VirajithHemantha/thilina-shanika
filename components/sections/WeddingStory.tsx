@@ -43,7 +43,7 @@ export default function WeddingStory() {
         >
           <p className="text-lg font-light leading-relaxed text-foreground">
             In the heart of Sri Lanka's golden shores, two souls found their
-            perfect harmony. VIMUKTHI and PIUMI's love story is one of laughter,
+            perfect harmony. THILINA and SHANIKA's love story is one of laughter,
             adventure, and the kind of connection that feels like coming home.
           </p>
 

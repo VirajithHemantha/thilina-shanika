@@ -69,7 +69,7 @@ export function Footer() {
             variants={itemVariants}
             className="text-center md:text-left space-y-4"
           >
-            <h3 className="text-3xl font-serif font-light text-gold">VIMUKTHI & PIUMI</h3>
+            <h3 className="text-3xl font-serif font-light text-gold">THILINA &amp; SHANIKA</h3>
             <p className="text-dark-text font-light leading-relaxed">
               Celebrating the union of two souls and the beginning of our forever journey.
             </p>
@@ -98,7 +98,7 @@ export function Footer() {
             </p>
             <div className="w-12 h-1 bg-gold/30 mx-auto" />
             <p className="text-dark-text font-light text-sm">
-              May 30, 2026
+              May 12, 2027
             </p>
           </motion.div>
 
@@ -183,7 +183,7 @@ export function Footer() {
           className="border-t border-gold/20 pt-8 mt-8 text-center space-y-3"
         >
           <p className="text-dark-text font-light text-sm">
-            VIMUKTHI & PIUMI's Wedding Celebration
+            THILINA &amp; SHANIKA's Wedding Celebration
           </p>
           <p className="text-light-gray font-light text-xs">
             © {currentYear} All rights reserved. Created with love.

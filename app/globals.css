@@ -5,9 +5,9 @@
 
 /* Premium Sri Lankan Kandyan Wedding Theme */
 :root {
-  /* Primary Colors - Royal Maroon & Gold */
-  --maroon-dark: #7A1E1E;
-  --maroon-light: #A82C2C;
+  /* Primary Colors - Emerald Green & Gold */
+  --emerald-dark: #064E3B;
+  --emerald-light: #0F766E;
   --gold-primary: #C9A227;
   --gold-accent: #D4AF37;
   --ivory: #F5E6C8;
@@ -24,13 +24,13 @@
   --card-foreground: var(--text-dark);
   --popover: var(--ivory);
   --popover-foreground: var(--text-dark);
-  --primary: var(--maroon-dark);
+  --primary: var(--emerald-dark);
   --primary-foreground: var(--white);
   --secondary: var(--gold-primary);
   --secondary-foreground: var(--text-dark);
   --muted: var(--text-muted);
   --muted-foreground: var(--ivory);
-  --accent: var(--maroon-light);
+  --accent: var(--emerald-light);
   --accent-foreground: var(--white);
   --destructive: #DC2626;
   --destructive-foreground: var(--white);
@@ -141,12 +141,12 @@
   }
 }
 
-@keyframes glow-maroon {
+@keyframes glow-emerald {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(122, 30, 30, 0.3);
+    box-shadow: 0 0 15px rgba(6, 78, 59, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(122, 30, 30, 0.5);
+    box-shadow: 0 0 30px rgba(6, 78, 59, 0.5);
   }
 }
 
@@ -204,8 +204,8 @@
   animation: glow 2s ease-in-out infinite;
 }
 
-.animate-glow-maroon {
-  animation: glow-maroon 2s ease-in-out infinite;
+.animate-glow-emerald {
+  animation: glow-emerald 2s ease-in-out infinite;
 }
 
 .animate-pulse-soft {

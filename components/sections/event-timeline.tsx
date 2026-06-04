@@ -23,7 +23,7 @@ export function EventTimeline() {
       accent: 'A Cherished Yes',
     },
     {
-      year: '2026',
+      year: '2027',
       title: 'Forever Starts Now',
       description:
         'Surrounded by family, blessings, and tradition, we begin our next chapter hand in hand and heart to heart.',
@@ -199,7 +199,7 @@ export function EventTimeline() {
                         <p className="text-[11px] uppercase tracking-[0.35em] text-[#a38022]">
                           {event.year}
                         </p>
-                        <h3 className="mt-3 font-serif text-3xl font-light text-[#5f1624]">
+                        <h3 className="mt-3 font-serif text-3xl font-light text-[#022c22]">
                           {event.title}
                         </h3>
                         <p className="mt-2 text-sm uppercase tracking-[0.24em] text-[#b7952d]">
@@ -244,7 +244,7 @@ export function EventTimeline() {
                       />
 
                       <div className="relative flex h-16 w-16 items-center justify-center rounded-full border border-[#C9A227]/28 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] shadow-[0_10px_28px_rgba(201,162,39,0.22)]">
-                        <span className="text-xl text-[#5f1624]">{event.icon}</span>
+                        <span className="text-xl text-[#022c22]">{event.icon}</span>
                       </div>
                     </motion.div>
                   </div>
@@ -273,7 +273,7 @@ export function EventTimeline() {
                         <p className="text-[11px] uppercase tracking-[0.35em] text-[#a38022]">
                           {event.year}
                         </p>
-                        <h3 className="mt-3 font-serif text-3xl font-light text-[#5f1624]">
+                        <h3 className="mt-3 font-serif text-3xl font-light text-[#022c22]">
                           {event.title}
                         </h3>
                         <p className="mt-2 text-sm uppercase tracking-[0.24em] text-[#b7952d]">
@@ -304,7 +304,7 @@ export function EventTimeline() {
                         <p className="text-[11px] uppercase tracking-[0.35em] text-[#a38022]">
                           {event.year}
                         </p>
-                        <h3 className="mt-3 font-serif text-2xl font-light text-[#5f1624]">
+                        <h3 className="mt-3 font-serif text-2xl font-light text-[#022c22]">
                           {event.title}
                         </h3>
                         <p className="mt-2 text-sm uppercase tracking-[0.22em] text-[#b7952d]">

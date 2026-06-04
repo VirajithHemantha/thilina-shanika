@@ -9,6 +9,7 @@ interface TimeLeft {
   hours: number;
   minutes: number;
   seconds: number;
+  milliseconds?: number;
 }
 
 export default function Countdown() {
@@ -17,7 +18,7 @@ export default function Countdown() {
     triggerOnce: true,
   });
 
-  const targetDate = useMemo(() => new Date('2026-06-18T10:30:00').getTime(), []);
+  const targetDate = useMemo(() => new Date('2027-05-12T09:00:00').getTime(), []);
 
   const getTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();
@@ -29,6 +30,7 @@ export default function Countdown() {
         hours: 0,
         minutes: 0,
         seconds: 0,
+        milliseconds: 0,
       };
     }
 
@@ -37,18 +39,23 @@ export default function Countdown() {
       hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
       minutes: Math.floor((difference / 1000 / 60) % 60),
       seconds: Math.floor((difference / 1000) % 60),
+      milliseconds: Math.floor((difference % 1000) / 10),
     };
   };
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(getTimeLeft());
 
+  const difference = targetDate - new Date().getTime();
+  const isCloseSoon = difference > 0 && difference < 30 * 24 * 60 * 60 * 1000;
+
   useEffect(() => {
+    const intervalTime = isCloseSoon ? 33 : 1000;
     const timer = setInterval(() => {
       setTimeLeft(getTimeLeft());
-    }, 1000);
+    }, intervalTime);
 
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, [targetDate, isCloseSoon]);
 
   const countdownItems = [
     { label: 'Days', value: timeLeft.days },
@@ -56,6 +63,10 @@ export default function Countdown() {
     { label: 'Minutes', value: timeLeft.minutes },
     { label: 'Seconds', value: timeLeft.seconds },
   ];
+
+  if (isCloseSoon) {
+    countdownItems.push({ label: 'Milliseconds', value: timeLeft.milliseconds ?? 0 });
+  }
 
   const particles = Array.from({ length: 12 }).map((_, i) => ({
     id: i,
@@ -68,7 +79,7 @@ export default function Countdown() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f4dfc2_18%,#6e1324_64%,#2c0610_100%)] px-6 py-24 md:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#f8eddc_0%,#f4dfc2_18%,#064e3b_64%,#022c22_100%)] px-6 py-24 md:py-32"
     >
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
@@ -137,7 +148,7 @@ export default function Countdown() {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#064e3b] md:text-6xl">
             Counting Down to <span className="text-[#C9A227]">Forever</span>
           </h2>
 
@@ -163,7 +174,7 @@ export default function Countdown() {
           <div className="absolute inset-0 rounded-[2rem] bg-[#C9A227]/10 blur-2xl" />
           <div className="absolute -inset-4 rounded-[2.2rem] border border-[#C9A227]/12" />
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-[#C9A227]/20 bg-[linear-gradient(180deg,rgba(92,15,29,0.95)_0%,rgba(56,8,17,0.98)_100%)] px-6 py-10 shadow-[0_30px_90px_rgba(0,0,0,0.28)] md:px-10 md:py-14">
+          <div className="relative overflow-hidden rounded-[2rem] border border-[#C9A227]/20 bg-[linear-gradient(180deg,#022c22_0%,#011913_100%)] px-6 py-10 shadow-[0_30px_90px_rgba(6,78,59,0.3)] md:px-10 md:py-14">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.16),transparent_35%)]" />
             <div className="absolute inset-4 rounded-[1.6rem] border border-[#f5e6c8]/10" />
 
@@ -173,7 +184,11 @@ export default function Countdown() {
             <div className="absolute bottom-5 left-5 h-12 w-12 rounded-bl-xl border-b border-l border-[#C9A227]/40" />
             <div className="absolute bottom-5 right-5 h-12 w-12 rounded-br-xl border-b border-r border-[#C9A227]/40" />
 
-            <div className="relative z-10 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
+            <div className={`relative z-10 grid gap-6 ${
+              isCloseSoon
+                ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5 md:gap-8'
+                : 'grid-cols-2 md:grid-cols-4 md:gap-8'
+            }`}>
               {countdownItems.map((item, index) => (
                 <motion.div
                   key={item.label}

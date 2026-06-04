@@ -13,20 +13,20 @@ export default function EventDetails() {
   const eventDetails = [
     {
       label: 'Date',
-      value: 'May 30, 2026',
+      value: 'May 12, 2027',
       sub: 'Saturday',
       icon: Calendar,
     },
     {
       label: 'Time',
-      value: '10:30 AM',
+      value: '9:00 AM',
       sub: 'Ceremony & Reception',
       icon: Clock3,
     },
     {
       label: 'Venue',
-      value: 'Golden Rose Hotel',
-      sub: 'Colombo, Sri Lanka',
+      value: 'Shangri-La Colombo',
+      sub: 'Lotus Ballroom',
       icon: MapPin,
     },
   ];
@@ -112,7 +112,7 @@ export default function EventDetails() {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#064e3b] md:text-6xl">
             Event <span className="text-[#C9A227]">Details</span>
           </h2>
 
@@ -264,7 +264,7 @@ export default function EventDetails() {
                 Kindly Respond
               </p>
               <p className="mt-3 text-lg font-light text-[#4f3d34]">
-                RSVP by May 20, 2026
+                RSVP by April 30, 2027
               </p>
             </div>
           </div>

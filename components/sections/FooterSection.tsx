@@ -3,11 +3,11 @@
 import { motion } from 'framer-motion';
 import { Heart, MapPin, Sparkles } from 'lucide-react';
 
-const LIVE_LOCATION_URL = 'https://maps.app.goo.gl/pikUWZebfsNYjp4i6?g_st=iw';
+const LIVE_LOCATION_URL = 'https://maps.google.com/?q=Shangri-La+Colombo+1+Galle+Face+Colombo+2+Sri+Lanka';
 
 export default function FooterSection() {
   return (
-    <footer className="relative overflow-hidden bg-[linear-gradient(180deg,#1b050d_0%,#10030a_100%)] border-t border-[#C9A227]/25 pt-20 pb-8 text-[#f5e6c8]">
+    <footer className="relative overflow-hidden bg-[linear-gradient(180deg,#011913_0%,#010f0c_100%)] border-t border-[#C9A227]/25 pt-20 pb-8 text-[#f5e6c8]">
 
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,162,39,0.14),transparent_52%)]" />
       <div className="pointer-events-none absolute -left-24 top-12 h-72 w-72 rounded-full bg-[#C9A227]/8 blur-3xl" />
@@ -34,10 +34,10 @@ export default function FooterSection() {
             </div>
 
             <h2 className="mb-6 font-serif text-5xl font-light tracking-wide text-[#C9A227] md:text-6xl">
-              V <span className="text-3xl text-[#f5e6c8]">&</span> P
+              T <span className="text-3xl text-[#f5e6c8]">&</span> S
             </h2>
             <p className="mx-auto max-w-xl text-sm font-light leading-relaxed text-[#f5e6c8]/65">
-              We look forward to sharing our joy and celebrating our holy union surrounded by the people we love most.
+              We look forward to sharing our joy and celebrating our wedding surrounded by the people we love most.
             </p>
             <a
               href={LIVE_LOCATION_URL}
@@ -46,7 +46,7 @@ export default function FooterSection() {
               className="mt-7 inline-flex items-center justify-center gap-2 self-center rounded-full border border-[#C9A227]/45 bg-white/[0.04] px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-[#C9A227] transition-colors hover:bg-[#C9A227]/10"
             >
               <MapPin className="h-4 w-4" />
-              St. Joseph's Church - Gonawila
+              Shangri-La Colombo (Lotus Ballroom)
             </a>
           </motion.div>
         </div>
@@ -68,14 +68,16 @@ export default function FooterSection() {
         <div className="flex flex-col items-center justify-between gap-4 px-4 text-center text-xs font-light tracking-[0.1em] text-[#C9A227] md:flex-row md:text-left">
           <div className="space-y-2">
             <p className="!text-[#C9A227]">
-              &copy; {new Date().getFullYear()} VIMUKTHI & PIUMI. All rights reserved.
+              &copy; {new Date().getFullYear()} THILINA & SHANIKA. All rights reserved.
             </p>
             <p className="!text-[#C9A227]">
               Design and created by <span className="!text-[#C9A227]">InviteMint</span> | Connect WhatsApp: <a href="https://wa.me/94707819074" target="_blank" rel="noopener noreferrer" className="!text-[#C9A227] hover:underline">+94 70 781 9074</a>
             </p>
           </div>
           <p className="flex items-center justify-center gap-1.5 whitespace-nowrap">
-            Crafted with <Heart className="h-3 w-3 fill-current text-[#C9A227] animate-pulse" /> for our special day
+            <span>Crafted with</span>
+            <Heart className="mx-1 h-3 w-3 inline-block fill-current text-[#C9A227] animate-pulse align-middle" />
+            <span>for our special day</span>
           </p>
         </div>
 

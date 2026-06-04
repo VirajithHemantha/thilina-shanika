@@ -17,26 +17,7 @@ export default function Blessings() {
     triggerOnce: true,
   });
 
-  const [blessings, setBlessings] = useState<Blessing[]>([
-    {
-      id: '1',
-      name: 'Priya & Rajesh',
-      message:
-        'A beautiful journey awaits you both. May your home be filled with grace, warmth, and endless joy through every season of life.',
-    },
-    {
-      id: '2',
-      name: 'Amira Khan',
-      message:
-        'May your love continue to deepen with every passing day, and may your marriage be blessed with peace, understanding, and happiness.',
-    },
-    {
-      id: '3',
-      name: 'Sarah Williams',
-      message:
-        'So happy to celebrate this beautiful union. Wishing you a lifetime of unforgettable memories, laughter, and love.',
-    },
-  ]);
+  const [blessings, setBlessings] = useState<Blessing[]>([]);
 
   const [newBlessing, setNewBlessing] = useState('');
   const [newName, setNewName] = useState('');
@@ -72,7 +53,7 @@ export default function Blessings() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-[linear-gradient(180deg,#2b0710_0%,#54111d_24%,#731528_50%,#f5e6c8_100%)] px-6 py-24 md:px-8 md:py-32"
+      className="relative overflow-hidden bg-[linear-gradient(180deg,#02241b_0%,#044b3c_24%,#065f46_50%,#f5e6c8_100%)] px-6 py-24 md:px-8 md:py-32"
     >
       {/* Ambient background */}
       <div className="pointer-events-none absolute inset-0">
@@ -267,7 +248,7 @@ export default function Blessings() {
                           repeat: Infinity,
                           ease: 'easeInOut',
                         }}
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-[#6d1424] shadow-[0_8px_20px_rgba(201,162,39,0.2)]"
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-[#C9A227]/25 bg-[radial-gradient(circle_at_top,#fff3d0_0%,#ecd594_38%,#d0a82f_100%)] text-[#064e3b] shadow-[0_8px_20px_rgba(201,162,39,0.2)]"
                       >
                         ✦
                       </motion.div>
@@ -276,7 +257,7 @@ export default function Blessings() {
                         <p className="text-[11px] uppercase tracking-[0.28em] text-[#a38022]">
                           Blessing From
                         </p>
-                        <h4 className="font-serif text-xl font-light text-[#5f1624]">
+                        <h4 className="font-serif text-xl font-light text-[#022c22]">
                           {blessing.name}
                         </h4>
                       </div>
@@ -338,7 +319,7 @@ export default function Blessings() {
             <span className="h-px w-12 bg-[#C9A227]/40" />
           </div>
 
-          <p className="font-serif text-xl font-light italic text-[#5d1a26] md:text-2xl">
+          <p className="font-serif text-xl font-light italic text-[#044b3c] md:text-2xl">
             {blessings.length} heartfelt wishes shared with love
           </p>
         </motion.div>

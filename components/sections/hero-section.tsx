@@ -53,7 +53,7 @@ export function HeroSection() {
           className="space-y-4"
         >
           <h1 className="text-7xl md:text-8xl font-serif font-light text-gold leading-tight">
-            VIMUKTHI & PIUMI
+            THILINA &amp; SHANIKA
           </h1>
 
           {/* Animated Underline */}
@@ -114,7 +114,7 @@ export function HeroSection() {
           className="pt-12"
         >
           <p className="text-gold text-lg font-serif font-light tracking-widest">
-            05.30.2026
+            05.12.2027
           </p>
         </motion.div>
       </div>

@@ -12,7 +12,7 @@ type TimeLeft = {
 };
 
 export function CountdownTimer() {
-  const weddingDate = useMemo(() => new Date('2026-06-18T10:30:00').getTime(), []);
+  const weddingDate = useMemo(() => new Date('2027-05-12T09:00:00').getTime(), []);
 
   const getTimeLeft = (): TimeLeft => {
     const now = new Date().getTime();
@@ -130,7 +130,7 @@ export function CountdownTimer() {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#064e3b] md:text-6xl">
             Countdown to <span className="text-[#C9A227]">Forever</span>
           </h2>
 

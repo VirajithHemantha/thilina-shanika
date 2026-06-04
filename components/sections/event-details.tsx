@@ -10,20 +10,20 @@ export function EventDetails() {
     {
       icon: Calendar,
       label: 'Date',
-      value: 'May 30, 2026',
+      value: 'May 12, 2027',
       detail: 'Saturday',
     },
     {
       icon: Clock3,
       label: 'Time',
-      value: '10:30 AM',
+      value: '9:00 AM',
       detail: 'Ceremony & Reception',
     },
     {
       icon: MapPin,
       label: 'Venue',
-      value: 'Golden Rose Hotel',
-      detail: 'Colombo, Sri Lanka',
+      value: 'Shangri-La Colombo',
+      detail: 'Lotus Ballroom',
     },
   ];
 
@@ -113,7 +113,7 @@ export function EventDetails() {
             </span>
           </div>
 
-          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#5a1220] md:text-6xl">
+          <h2 className="font-serif text-4xl font-light tracking-[0.04em] text-[#064e3b] md:text-6xl">
             Wedding <span className="text-[#C9A227]">Details</span>
           </h2>
 
