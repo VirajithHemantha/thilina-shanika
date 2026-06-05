@@ -1,6 +1,6 @@
 function doPost(e) {
   try {
-    var spreadsheetId = '1rRXSwHlgJbFhVVsCGf1CWLzDH4JcWOcDp0zyZJmDJ58';
+    var spreadsheetId = '1vtk3hmbb0MbUA0cPZsOPQb2A1bAouqT2QfEiPVPybeM';
     var ss = SpreadsheetApp.openById(spreadsheetId);
 
     var body = e && e.postData && e.postData.contents ? e.postData.contents : '{}';
@@ -54,4 +54,13 @@ function doPost(e) {
       .createTextOutput(JSON.stringify({ success: false, error: String(err) }))
       .setMimeType(ContentService.MimeType.JSON);
   }
+}
+
+function doGet(e) {
+  return ContentService
+    .createTextOutput(JSON.stringify({ 
+      status: "running", 
+      message: "Wedding RSVP & Wishes API is online. Please send a POST request with payload to submit RSVP or wishes." 
+    }))
+    .setMimeType(ContentService.MimeType.JSON);
 }

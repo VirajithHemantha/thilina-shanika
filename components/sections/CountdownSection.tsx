@@ -175,67 +175,66 @@ export default function CountdownSection() {
         </motion.div>
 
         <div className="rounded-[2rem] border border-[#064E3B]/25 bg-[linear-gradient(135deg,rgba(255,255,255,0.7)_0%,rgba(230,247,240,0.6)_100%)] p-4 shadow-[0_20px_70px_rgba(6,78,59,0.1)] backdrop-blur-xl sm:p-6 md:p-8">
-          <div className={`grid gap-3 md:gap-6 ${
-            isCloseSoon
+          <div className={`grid gap-3 md:gap-6 ${isCloseSoon
               ? 'grid-cols-2 sm:grid-cols-3 md:grid-cols-5'
               : 'grid-cols-2 md:grid-cols-4'
-          }`}>
-          {countdownItems.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{
-                duration: 0.7,
-                delay: 0.15 + index * 0.1,
-                type: "spring",
-                bounce: 0.35
-              }}
-              whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative"
-            >
-              <div className="relative overflow-hidden rounded-[1.8rem] border border-[#064E3B]/25 bg-[linear-gradient(160deg,rgba(255,255,255,0.95)_0%,rgba(224,245,237,0.88)_100%)] p-5 shadow-[0_12px_30px_rgba(6,78,59,0.15)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(6,78,59,0.24)] md:p-7">
-                <div className="absolute inset-0 opacity-[0.15]"
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(6,78,59,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6,78,59,0.1) 1px, transparent 1px)',
-                    backgroundSize: '24px 24px',
-                  }}
-                />
+            }`}>
+            {countdownItems.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 40, scale: 0.95 }}
+                animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.15 + index * 0.1,
+                  type: "spring",
+                  bounce: 0.35
+                }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group relative"
+              >
+                <div className="relative overflow-hidden rounded-[1.8rem] border border-[#064E3B]/25 bg-[linear-gradient(160deg,rgba(255,255,255,0.95)_0%,rgba(224,245,237,0.88)_100%)] p-5 shadow-[0_12px_30px_rgba(6,78,59,0.15)] transition-all duration-300 group-hover:shadow-[0_20px_45px_rgba(6,78,59,0.24)] md:p-7">
+                  <div className="absolute inset-0 opacity-[0.15]"
+                    style={{
+                      backgroundImage:
+                        'linear-gradient(rgba(6,78,59,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6,78,59,0.1) 1px, transparent 1px)',
+                      backgroundSize: '24px 24px',
+                    }}
+                  />
 
-                <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-[#C9A227]/30" />
-                <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-[#C9A227]/20" />
+                  <div className="absolute -right-6 -top-6 h-20 w-20 rounded-full border border-[#C9A227]/30" />
+                  <div className="absolute -left-6 -bottom-6 h-16 w-16 rounded-full border border-[#C9A227]/20" />
 
-                <div className="relative z-10 flex flex-col items-center justify-center text-center">
-                  <div className="relative flex h-[64px] w-full items-center justify-center overflow-hidden sm:h-[78px] md:h-[96px]">
-                    <AnimatePresence mode="popLayout">
-                      <motion.span
-                        key={item.value}
-                        initial={{ y: 40, opacity: 0, scale: 0.65 }}
-                        animate={{ y: 0, opacity: 1, scale: 1 }}
-                        exit={{ y: -40, opacity: 0, scale: 0.65 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 370,
-                          damping: 24,
-                          mass: 1
-                        }}
-                        className="absolute font-serif text-5xl font-semibold text-[#064e3b] drop-shadow-[0_2px_8px_rgba(6,78,59,0.2)] sm:text-6xl md:text-7xl"
-                      >
-                        {String(item.value).padStart(2, '0')}
-                      </motion.span>
-                    </AnimatePresence>
-                  </div>
+                  <div className="relative z-10 flex flex-col items-center justify-center text-center">
+                    <div className="relative flex h-[64px] w-full items-center justify-center overflow-hidden sm:h-[78px] md:h-[96px]">
+                      <AnimatePresence mode="popLayout">
+                        <motion.span
+                          key={item.value}
+                          initial={{ y: 40, opacity: 0, scale: 0.65 }}
+                          animate={{ y: 0, opacity: 1, scale: 1 }}
+                          exit={{ y: -40, opacity: 0, scale: 0.65 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 370,
+                            damping: 24,
+                            mass: 1
+                          }}
+                          className="absolute font-serif text-5xl font-semibold text-[#064e3b] drop-shadow-[0_2px_8px_rgba(6,78,59,0.2)] sm:text-6xl md:text-7xl"
+                        >
+                          {String(item.value).padStart(2, '0')}
+                        </motion.span>
+                      </AnimatePresence>
+                    </div>
 
-                  <div className="mt-3 rounded-full border border-[#C9A227]/35 bg-white/75 px-3 py-1.5 shadow-sm md:mt-5">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A227] md:text-xs">
-                      {item.label}
-                    </p>
+                    <div className="mt-3 rounded-full border border-[#C9A227]/35 bg-white/75 px-3 py-1.5 shadow-sm md:mt-5">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#C9A227] md:text-xs">
+                        {item.label}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
           </div>
         </div>
 

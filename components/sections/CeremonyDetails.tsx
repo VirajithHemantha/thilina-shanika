@@ -55,7 +55,7 @@ export default function CeremonyDetails() {
             <motion.div
               whileHover={{ scale: 1.02, rotateY: 5 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className="relative h-[420px] sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border border-[#C9A227]/60 shadow-[0_20px_50px_rgba(201,162,39,0.2)] bg-[linear-gradient(180deg,#011410_0%,#022c22_55%,#010d0a_100%)]"
+              className="relative aspect-[2/3] h-auto sm:aspect-auto sm:h-[520px] md:h-[600px] w-full max-w-[420px] overflow-hidden rounded-[30px] md:rounded-t-[200px] md:rounded-b-[30px] border border-[#C9A227]/60 shadow-[0_20px_50px_rgba(201,162,39,0.2)] bg-[linear-gradient(180deg,#011410_0%,#022c22_55%,#010d0a_100%)]"
             >
               <div className="absolute -inset-6 rounded-t-[220px] rounded-b-[40px] border border-[#C9A227]/20 hidden md:block" />
               <div className="absolute -inset-3 rounded-t-[210px] rounded-b-[35px] border border-[#C9A227]/40 hidden md:block" />
