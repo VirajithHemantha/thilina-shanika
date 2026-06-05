@@ -20,8 +20,8 @@ export const metadata: Metadata = {
   description: 'Join us as we celebrate the wedding ceremony of THILINA and SHANIKA on May 12, 2027.',
   generator: 'v0.app',
   icons: {
-    icon: '/wedding-icon.png',
-    apple: '/wedding-icon.png',
+    icon: '/icon.svg',
+    apple: '/icon.svg',
   },
 }
 
