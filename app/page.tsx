@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { EnvelopeOpener } from '@/components/envelope-opener';
 import HeroSection from '@/components/sections/HeroSection';
+import GuestGreeting from '@/components/sections/GuestGreeting';
 import CeremonyDetails from '@/components/sections/CeremonyDetails';
 import CountdownSection from '@/components/sections/CountdownSection';
 import VenueLocation from '@/components/sections/VenueLocation';
@@ -25,10 +26,15 @@ export default function Home() {
       <MusicPlayer />
 
       {!isOpened ? (
-        <EnvelopeOpener onEnvelopeOpen={() => setIsOpened(true)} />
+        <Suspense fallback={null}>
+          <EnvelopeOpener onEnvelopeOpen={() => setIsOpened(true)} />
+        </Suspense>
       ) : (
         <>
           <HeroSection />
+          <Suspense fallback={null}>
+            <GuestGreeting />
+          </Suspense>
           <CeremonyDetails />
           <CountdownSection />
           <VenueLocation />

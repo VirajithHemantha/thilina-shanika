@@ -406,12 +406,12 @@ export function EnvelopeOpener({ onEnvelopeOpen }: EnvelopeOpenerProps) {
                           Together with their families
                         </p>
                         <p className="text-[9px] leading-5 text-[#6a4d0d]">
-                          Bride, the loving daughter of<br />
-                          <span className="font-semibold">RUPA THILAKARATHNA</span> (Mother) and <span className="font-semibold">S.K. WIJETHILAKA</span> (Father)
-                        </p>
-                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
                           Groom, the loving son of<br />
                           <span className="font-semibold">DAYANI ABESINGHE</span> (Mother) and <span className="font-semibold">A.K. DAYARATHNA</span> (Father)
+                        </p>
+                        <p className="text-[9px] leading-5 text-[#6a4d0d]">
+                          Bride, the loving daughter of<br />
+                          <span className="font-semibold">RUPA THILAKARATHNA</span> (Mother) and <span className="font-semibold">S.K. WIJETHILAKA</span> (Father)
                         </p>
                       </div>
 

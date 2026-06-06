@@ -91,9 +91,9 @@ export default function Hero() {
           variants={itemVariants}
         >
           <span className="block text-sm md:text-base opacity-75 mb-4">
-            Bride's Parents: Mother - Rupa Thilakarathna | Father - S.K. Wijethilaka <br />
+            Groom's Parents: Mother - Dayani Abesinghe | Father - A.K.Dayarathna <br />
             &amp; <br />
-            Groom's Parents: Mother - Dayani Abesinghe | Father - A.K.Dayarathna
+            Bride's Parents: Mother - Rupa Thilakarathna | Father - S.K. Wijethilaka
           </span>
           Together with their families,{' '}
           <span className="font-serif">joyfully</span> invite you to celebrate
